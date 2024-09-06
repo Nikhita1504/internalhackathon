@@ -1,8 +1,8 @@
 import { useState } from "react";
 import axios from 'axios';
-import data from '/Users/nikhitadas/react-admin-dashboard/src/scenes/form/data.json';
-import valsadData from '/Users/nikhitadas/react-admin-dashboard/src/data/valsad f.json';
-import vadodraData from '/Users/nikhitadas/react-admin-dashboard/src/data/vadodra f.json';
+import data from '../scenes/form/data.json';
+import valsadData from '../data/valsad f.json';
+import vadodraData from "../data/vadodra f.json";
 import ChartView from "./ChartView";
 import ResultsView from "./ResultsView";
 // import HashLoader from "./HashLoader";

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import data from './data.json';
-import valsadData from '/Users/nikhitadas/react-admin-dashboard/src/data/valsad f.json';
-import vadodraData from '/Users/nikhitadas/react-admin-dashboard/src/data/vadodra f.json';
+import valsadData from '../../data/valsad f.json';
+import vadodraData from '../../data/vadodra f.json';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import './index.css';

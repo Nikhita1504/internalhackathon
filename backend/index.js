@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 require('dotenv').config();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 // MongoDB connection setup
 const connectToMongoDB = async () => {
