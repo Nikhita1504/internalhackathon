@@ -62,7 +62,7 @@ const ChartComponent = () => {
             setIsLoading(false); // Stop loading even if there's an error
             alert('Failed to fetch API results');
           }
-        }, 2000); // Simulate 2 seconds delay for API response
+        }, 0); // Simulate 2 seconds delay for API response
       } catch (error) {
         console.error("Error fetching API data:", error);
         setIsLoading(false); // Stop loading even if there's an error
@@ -175,7 +175,7 @@ const ChartComponent = () => {
 
       {view === 'results' && schemeResults && !isLoading && (
         <div className="full-page-results">
-          <ResultsView results={schemeResults} />
+          <ResultsView results={schemeResults}  villageName={selectedVillage} />
         </div>
       )}
     </div>

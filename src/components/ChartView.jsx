@@ -22,7 +22,7 @@ const ChartView = ({ villageDetails }) => {
     return [
       {
         name: '0-10',
-        Male: villageDetails['Population in the age group 0-10 Male'],
+        Male : villageDetails['Population in the age group 0-10 Male'],
         Female: villageDetails['Population in the age group 0-10 Female']
       },
       {
@@ -46,20 +46,21 @@ const ChartView = ({ villageDetails }) => {
   const getAgriculturalLabourersData = () => {
     if (!villageDetails) return [];
     return [
-      { name: 'Main Male', value: villageDetails['Main Agricultural Labourers Population Male'] },
-      { name: 'Main Female', value: villageDetails['Main Agricultural Labourers Population Female'] },
-      { name: 'Marginal Male', value: villageDetails['Marginal Agriculture Labourers Population Male'] },
-      { name: 'Marginal Female', value: villageDetails['Marginal Agriculture Labourers Population Female'] }
+      { name: 'Main Male AgriculturalLabourers', value: villageDetails['Main Agricultural Labourers Population Male'] },
+      { name: 'Main Female AgriculturalLabourers', value: villageDetails['Main Agricultural Labourers Population Female'] },
+      { name: 'Marginal Male AgriculturalLabourers', value: villageDetails['Marginal Agriculture Labourers Population Male'] },
+      { name: 'Marginal Female AgriculturalLabourers', value: villageDetails['Marginal Agriculture Labourers Population Female'] }
+      
     ];
   };
 
   const getCultivatorsData = () => {
     if (!villageDetails) return [];
     return [
-      { name: 'Main Male', value: villageDetails['Main Cultivator Population Male'] },
-      { name: 'Main Female', value: villageDetails['Main Cultivator Population Female'] },
-      { name: 'Marginal Male', value: villageDetails['Marginal Cultivator Population Male'] },
-      { name: 'Marginal Female', value: villageDetails['Marginal Cultivator Population Female'] }
+      { name: 'Household Industries', value: villageDetails['Main Household Industries Population Person'] },
+      { name: 'Other workers population', value: villageDetails['Main Other Workers Population Person'] },
+      { name: 'Non-working population', value: villageDetails['Non Working Population Person'] },
+      { name: 'Agricultural labourers', value: villageDetails['Main Agricultural Labourers Population Person'] }
     ];
   };
 
@@ -173,7 +174,7 @@ const ChartView = ({ villageDetails }) => {
             />
           </PieChart>
         </ResponsiveContainer>
-        <p>Cultivators Based Chart</p>
+        <p>Economic Cycle Based Chart</p>
       </div>
       
 
@@ -291,7 +292,7 @@ const ChartView = ({ villageDetails }) => {
                 />
               </PieChart>
             </ResponsiveContainer>
-            <p>Cultivators</p>
+            <p>Economic Cycle </p>
           </div>
         )}
         <button onClick={closeModal}>Close</button>

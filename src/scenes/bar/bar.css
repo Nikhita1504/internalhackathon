@@ -137,6 +137,20 @@ body {
   color: black;
   transition: 1s;
 }
+.schedule{
+  border: 1px solid white;
+  padding: 0.5rem;
+  margin-top: 20px;
+  background-color: transparent;
+  color: white;
+  width: 120px;
+}
+.schedule:hover{
+  background-color: white;
+  cursor: pointer;
+  color: black;
+  transition: 1s;
+}
 
 .Show-results {
   border: 1px solid white;
@@ -248,6 +262,18 @@ body {
   text-align: center;
   /* To center the button */
 }
+.chart-modal {
+  width: 80%; /* Increase width percentage */
+  max-width: 900px; /* Optional: set a maximum width */
+  margin-left: 70px; /* Center the modal */
+}
+
+
+
+/* .modal-chart {
+  width: 700px;
+  height: 500px;
+} */
 
 /* .results-container {
   background-color: #1F2A40;
