@@ -5,7 +5,8 @@ import valsadData from '/Users/nikhitadas/react-admin-dashboard/src/data/valsad 
 import vadodraData from '/Users/nikhitadas/react-admin-dashboard/src/data/vadodra f.json';
 import ChartView from "./ChartView";
 import ResultsView from "./ResultsView";
-import HashLoader from "./HashLoader";
+// import HashLoader from "./HashLoader";
+import HashLoader from 'react-spinners/HashLoader';
 
 const ChartComponent = () => {
   const [selectedState, setSelectedState] = useState('');
@@ -165,7 +166,9 @@ const ChartComponent = () => {
       {isLoading && (
         <div className="loader">
           {/* Display loader while fetching the data */}
-          <p>Loading...</p>
+          {/* <p>Loading...</p> */}
+          <HashLoader color="#36D7B7" size={60} />
+          {/* <HashLoader /> */}
           {/* <HashLoader/> */}
         </div>
       )}
@@ -180,4 +183,5 @@ const ChartComponent = () => {
 };
 
 export default ChartComponent;
+
 
