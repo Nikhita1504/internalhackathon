@@ -17,7 +17,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 require('dotenv').config();
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5001;
+
+
 
 // MongoDB connection setup
 const connectToMongoDB = async () => {
@@ -39,7 +41,7 @@ const ApiDataSchema = new mongoose.Schema({
     farming_cycle: Number
 });
 
-const ApiData = mongoose.model('Api_data', ApiDataSchema);
+const ApiData = mongoose.model('data', ApiDataSchema);
 
 app.get("/result", (req, res) => {
     res.render("Api");
@@ -57,7 +59,7 @@ app.post('/predict', async (req, res) => {
         }
 
         // Make a POST request to the external API
-        const response = await axios.post('https://post-office-scheme-model-1.onrender.com/predict', requestData);
+        const response = await axios.post('https://model3-9aqk.onrender.com/predict', requestData);
 
         // Send the response data back to the frontend
         res.json(response.data);
@@ -65,6 +67,7 @@ app.post('/predict', async (req, res) => {
         console.error('Error making request:', error);
         res.status(500).json({ error: 'Error making request' });
     }
+    
 });
 
 
@@ -73,5 +76,10 @@ app.listen(PORT, () => {
     connectToMongoDB();
     console.log(`Server is running on port ${PORT}`);
 });
+
+
+
+
+
 
 

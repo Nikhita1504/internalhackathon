@@ -20,7 +20,7 @@ const ResultsView = ({ results, villageName }) => {
     { name: 'Senior Citizens Savings Scheme Account', value: results.SCSS },
     { name: 'Sukanya Samriddhi Account', value: results.SSA },
     { name: 'Kisan Vikas Patra', value: results.KVP },
-    { name: 'Mahila Samman Savings Certificate', value: results.Mahila_Samman },
+
   ];
 
   const sortedSchemes = schemes.sort((a, b) => b.value - a.value);
@@ -35,7 +35,7 @@ const ResultsView = ({ results, villageName }) => {
             <div className="circular-progress">
               <CircularProgressbar
                 value={scheme.value * 100}
-                text={`${(scheme.value * 100).toFixed(2)}%`}
+                text={`${(scheme.value ).toFixed(2)}%`}
                 styles={buildStyles({
                   pathColor: `url(#gradient-${scheme.name.replace(/\s+/g, '-')})`, // Use scheme.name to generate unique gradient ID
                   textColor: '#fff',
